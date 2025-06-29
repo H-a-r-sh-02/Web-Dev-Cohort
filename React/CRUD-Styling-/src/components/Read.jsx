@@ -1,17 +1,18 @@
 // import style from './Read.module.css';
+import { useContext } from 'react';
 import { toast } from 'react-toastify';
+import { todoContext } from './Wrapper';
 
-const Read = (props) => {
-    const todos= props.todo;
-    const settodo = props.settodo;
+const Read = () => {
+  const [todo, settodo] = useContext(todoContext);
 
     const deleteHandler = (id)=>{
-      const filteredTodo = todos.filter((todo)=> todo.id != id);
+      const filteredTodo = todo.filter((todo)=> todo.id != id);
       settodo(filteredTodo);
       toast.error("Todo Deleted!");
     }
 
-     const renderTodo = todos.map((todo)=>{
+     const renderTodo = todo.map((todo)=>{
   return <li className='bg-gray-900 rounded text-xl px-5 py-2 flex justify-between mb-2' key={todo.id}>
               <span>{todo.title}</span>
               <button onClick={()=> deleteHandler(todo.id)} 

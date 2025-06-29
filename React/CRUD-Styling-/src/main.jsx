@@ -5,9 +5,8 @@ import { Slide, ToastContainer } from "react-toastify";
 import Wrapper from "./components/Wrapper.jsx";
 
 createRoot(document.getElementById("root")).render(
-    // <>
-    //   <App />
-    //   <ToastContainer position="top-center" theme="dark" autoClose={2000} transition={Slide} />
-    // </>
-    <Wrapper App={<App />} />
+    <Wrapper>
+      <App />
+      <ToastContainer position="top-center" theme="dark" autoClose={2000} transition={Slide} />
+    </Wrapper>
 );
