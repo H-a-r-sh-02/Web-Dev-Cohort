@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.images{
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(17, 17, 16);
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "a a"
+    "a a"
+    "b c"
+    "d e"
+    "f f"
+    "f f"
+    "g h"
+    "i j"
+    ;
+    
+}
+@media(min-width: 768px){
+    .images{
+        grid-template-areas: 
+        "a a a a"
+        "b b c c"
+        "d d d d"
+        "e e f f"
+        "g g g g"
+        "h h i i"
+        "j j j j"
+        ;
+        
+    }
+}
+@media(min-width: 1080px){
+    .images{
+        grid-template-areas: 
+        "a a b c"
+        "a a d e"
+        "f g j j"
+        "h i j j"
+        ;
+        
+    }
+}
+
+img{
+    /* display: none; */
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+}
+.first{
+    grid-area: a;
+}
+.second{
+    grid-area: b;
+}
+.third{
+    grid-area: c;
+}
+.fourth{
+    grid-area: d;
+}
+.fifth{
+    grid-area: e;
+}
+.sixth{
+    grid-area: f;
+}
+.seventh{
+    grid-area: g;
+}
+.eight{
+    grid-area: h;
+}
+.ninth{
+    grid-area: i;
+}
+.tenth{
+    grid-area: j;
+}

@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em
+}
+.image{
+    height: 20%;
+    position: absolute;
+}
+button{
+    padding: .5em 1.3em;
+    background-color: rgb(18, 143, 66);
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 500;
+    border-radius: .5em;
+    border: 2px solid #000;
+    z-index: 8;
+}
+button:active{
+    scale: 0.95;
+}

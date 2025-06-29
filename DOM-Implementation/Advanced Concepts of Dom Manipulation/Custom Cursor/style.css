@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+#box{
+    height: 50%;
+    width: 30%;
+    position: relative;
+    background-color: #823859;
+}
+#smlbox{
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #122238;
+}

@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3em;
+}
+
+#box{
+    height: 280px;
+    width: 450px;
+    border-radius: 1em;
+    background-color: rgb(256, 256, 256);
+}
+
+button{
+    padding: .8em 1.3em;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 2em;
+    border: 1px solid #000;
+}

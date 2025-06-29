@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    transition: top 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: black;
+    padding: 2em .4em;
+}
+nav h3 a{
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    mix-blend-mode: difference;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+}
+#page1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+}
+#page2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress bar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#000]">
+  
+    <div id="box" class="bg-white px-8 py-7 h-35 w-102 rounded">
+        <div class="prgbar w-85 bg-gray-400 overflow-hidden rounded-full h-5">
+            <div id="progress" class="bg-green-600 w-0 h-full rounded-full"></div>
+        </div>
+        <div class="flex justify-end text-xl font-semibold">
+            <h5 id="percent">0%</h5>
+        </div>
+        <div class="flex justify-between mt-2">
+            <h3 class="text-xl font-semibold">Song.mp3</h3>
+            <button class="bg-green-600 text-white font-medium px-4 py-2 rounded active:scale-[0.95]">Download</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

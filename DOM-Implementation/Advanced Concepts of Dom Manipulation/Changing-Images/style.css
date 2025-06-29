@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+.card{
+    height: 60%;
+    width: 20%;
+    border-radius: 1em;
+    border: 2px solid #dadada;
+    background-color: rgba(128, 128, 128, 0.425);
+    background-size: cover;
+    background-position: center;
+}
+button{
+    padding: .5em 1.2em;
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: rgba(6, 154, 240, 0.952);
+    border-radius: 1em;
+    border: 1px solid #000;
+    color: #fff;
+}
+button:active{
+    scale: .95;
+}
