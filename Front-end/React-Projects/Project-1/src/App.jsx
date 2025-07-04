@@ -1,10 +1,13 @@
 import React from 'react'
-import Recipe from './components/Recipe'
+import Mainroutes from './routes/Mainroutes'
+import Navbar from './components/Navbar'
+import Create from './pages/Create'
 
 const App = () => {
   return (
-    <div>
-      <Recipe />
+    <div className='w-full h-screen bg-gray-900 text-white px-[15%] '>
+      <Navbar />
+      <Mainroutes />
     </div>
   )
 }
