@@ -16,8 +16,8 @@ app.get('/home', (req, res)=>{
 app.post('/notes', (req, res)=> {
     notes.push(req.body);
     // res.json({
-    //     "Message": "Note added successfully ✅",
-    //     "Notes": notes
+    //     Message: "Note added successfully ✅",
+    //     Notes: notes
     // });// json method..
 
     res.send({
