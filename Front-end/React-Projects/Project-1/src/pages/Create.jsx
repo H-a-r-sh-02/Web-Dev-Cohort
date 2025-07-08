@@ -9,16 +9,17 @@ const Create = () => {
 
   const submitHandler = (recipe)=>{
     recipe.id = nanoid();
+    console.log(recipe);
     setdata([...data, recipe]);
     reset();
   }
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)} className='w-[45%] h-[75%] px-10 py-2 mt-8 mx-66 rounded bg-slate-800'>
+    <form onSubmit={handleSubmit(submitHandler)} className='w-[45%] h-[75%] px-10 py-2 mt-8 mx-66 rounded bg-green/30 backdrop-blur-md'>
       <h2 className='mb-4 text-2xl font-thin text-center'>Create Recipe</h2>
 
       <input className='block border-b outline-0 p-2' type='url' {...register("image")} placeholder='Enter Image URL' />
-      <small className='text-red-400'>This is how error is shown</small>
+      {/* <small className='text-red-400'>This is how error is shown</small> */}
 
       <input className='block border-b outline-0 p-2' {...register("title")} type='text' placeholder='Recipe Title' />
 
@@ -28,7 +29,7 @@ const Create = () => {
 
       <textarea className='block border-b outline-0 p-2' {...register("instruction")} placeholder='//Write instructions in points'></textarea>
       
-      <select className='block border-b outline-0 p-2 bg-slate-800' {...register("category")}>
+      <select className='block border-b outline-0 p-2 mt-3 bg-black' {...register("category")}>
         <option value="cat-1">Category-1</option>
         <option value="cat-2">Category-2</option>
         <option value="cat-3">Category-3</option>
