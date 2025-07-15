@@ -24,12 +24,11 @@ const RecipeContext = (props) => {
     "Slice and serve hot."
   ],
   "description": [
-    "Pizza",
-    "Italian"
+    "A simple yet flavorful Italian pizza topped with fresh mozzarella, tangy tomato sauce, and aromatic basil leaves.",
   ],
   "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
   "category": [
-    "Dinner"
+    "dinner"
   ]
 }
     ]);
