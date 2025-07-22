@@ -9,4 +9,4 @@ function connectToDb() {
         console.error('error connecting to DB:', err);
     });
 }
-module.exports = connectToDb;
+module.exports = connectToDb;   

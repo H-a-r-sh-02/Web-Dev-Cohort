@@ -4,6 +4,7 @@ const connectToDb = require('./src/db/db');
 
 connectToDb();
 
+app.get("/healthz", (req, res) => res.send("OK"));
 app.get('/', (req, res)=>{
 
 });
