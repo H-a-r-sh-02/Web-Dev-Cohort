@@ -1,8 +1,8 @@
  import React, { useEffect, useRef } from 'react';
  import * as faceapi from 'face-api.js';
+ import axios from 'axios';
 
-
- export default function FacialExpression() {
+ export default function FacialExpression({setsongs}) {
   const videoRef = useRef();
 
      const loadModels = async () => {
@@ -38,7 +38,11 @@
                 _expression = expression
             }
           }
-          console.log(_expression);
+          axios.get(`http://localhost:3000/songs?mood=${_expression}`)
+          .then(response=>{
+            // console.log(response.data);
+            setsongs(response.data.songs)
+          })
     }
 
   useEffect(() => {
@@ -48,14 +52,14 @@
   }, []);
 
   return (
-    <div className='flex gap-3 items-center justify-center'>
+    <div className='flex flex-col items-center justify-center gap-4 w-full px-4 sm:flex-row sm:gap-6'>
       <video
         ref={videoRef}
         autoPlay
         muted
-       className='w-[25rem] aspect-video object-cover rounded'
+       className='w-full max-w-xs sm:max-w-md aspect-video rounded-xl object-cover'
       />
-      <button className='px-[1rem] py-[0.5rem] rounded bg-white cursor-pointer' onClick={detectMood}>Detect Mood</button>
+      <button className='bg-white text-black font-medium px-4 py-2 rounded shadow ' onClick={detectMood}>Detect Mood</button>
  </div>
  );
  }
