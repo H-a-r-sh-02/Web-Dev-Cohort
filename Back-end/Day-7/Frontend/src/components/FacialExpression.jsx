@@ -1,6 +1,7 @@
  import React, { useEffect, useRef } from 'react';
  import * as faceapi from 'face-api.js';
  import axios from 'axios';
+ import BACKEND_URL from '../config';
 
  export default function FacialExpression({setsongs}) {
   const videoRef = useRef();
@@ -38,11 +39,14 @@
                 _expression = expression
             }
           }
-          axios.get(`http://localhost:3000/songs?mood=${_expression}`)
+          axios.get(`${BACKEND_URL}/songs?mood=${_expression}`)
           .then(response=>{
             // console.log(response.data);
-            setsongs(response.data.songs)
+            setsongs(response.data.songs);
           })
+          .catch(error => {
+           console.error("Error fetching songs:", error);
+            });
     }
 
   useEffect(() => {
