@@ -2,6 +2,7 @@
  import * as faceapi from 'face-api.js';
  import axios from 'axios';
  import BACKEND_URL from '../config';
+import { toast } from 'react-toastify';
 
  export default function FacialExpression({setsongs}) {
   const videoRef = useRef();
@@ -28,7 +29,8 @@
           let _expression = '';
 
           if(!detections || detections.length === 0) {
-            console.log("No Face Detected!");
+            // console.log("No Face Detected!");
+            toast.error("No Face Detected!")
             return; 
           }
     
@@ -47,6 +49,8 @@
           .catch(error => {
            console.error("Error fetching songs:", error);
             });
+
+            toast.success("Mood is Detected!");
     }
 
   useEffect(() => {

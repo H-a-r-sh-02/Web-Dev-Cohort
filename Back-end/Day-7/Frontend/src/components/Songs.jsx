@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { toast } from "react-toastify";
+
 
 const Songs = ({songs}) => {
   const [isPlaying, setisPlaying] = useState(null);
@@ -10,6 +12,7 @@ const Songs = ({songs}) => {
     }
   };
 
+  
   return (
     <div className="text-white px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 pt-2">
 
