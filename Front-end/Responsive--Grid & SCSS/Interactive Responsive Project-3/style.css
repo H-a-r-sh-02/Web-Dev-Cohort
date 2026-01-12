@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding: 1rem;
+  width: 100%;
+}
+
+.view-1 {
+  width: 100%;
+}
+.view-1 .top {
+  padding-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+.view-1 .top h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  margin-bottom: 1rem;
+}
+.view-1 .top h1 span {
+  opacity: 0.6;
+}
+.view-1 .bottom {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" "a a c c";
+  gap: 0.6rem;
+}
+.view-1 .bottom img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+.view-1 .bottom .img-a {
+  grid-area: a;
+}
+.view-1 .bottom .img-b {
+  grid-area: b;
+  max-height: 15rem;
+}
+.view-1 .bottom .img-c {
+  grid-area: c;
+  max-height: 10rem;
+}
+
+@media (min-width: 1020px) {
+  main {
+    padding: 5rem 3rem 0 3rem;
+  }
+  .view-1 {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .view-1 .top {
+    width: 55%;
+  }
+  .view-1 .top h1 {
+    font-size: clamp(2rem, 6vw, 5rem);
+    line-height: 1.2em;
+  }
+  .view-1 .top p {
+    width: 88%;
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  .view-1 .bottom {
+    width: 45%;
+    grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" ". . c c";
+    gap: 2.2rem;
+  }
+  .view-1 .bottom .img-a {
+    max-height: 24rem;
+  }
+  .view-1 .bottom .img-b {
+    max-height: 18rem;
+  }
+  .view-1 .bottom .img-c {
+    max-height: 12rem;
+  }
+}/*# sourceMappingURL=style.css.map */
