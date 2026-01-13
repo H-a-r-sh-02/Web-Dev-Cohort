@@ -14,9 +14,7 @@ body {
 }
 
 .card {
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -34,4 +32,4 @@ body {
 }
 .card h1 {
   font-size: 28px;
-}/*# sourceMappingURL=style.css.map */
+}

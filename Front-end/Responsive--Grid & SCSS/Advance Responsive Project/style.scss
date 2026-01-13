@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  padding: 1.5rem;
+
+  .sec-1 {
+    width: 100%;
+    padding-top: 2rem;
+    h1 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 4.5rem;
+      font-weight: 400;
+    }
+
+    .text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0.2rem;
+
+      p {
+        font-size: 1.5rem;
+        opacity: 0.9;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .sec-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    gap: 2rem;
+
+     .top {
+      width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h1 {
+      font-size: 3.8rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 0.9em;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    .display {
+      width: 100%;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .strip {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+          font-size: 2.7rem;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          opacity: 0.9;
+        }
+      }
+      .line {
+        height: 1px;
+        width: 100%;
+        background-color: #000;
+      }
+    }
+  }
+  }
+}
+
+@media (min-width: 1020px) {
+   
+}
