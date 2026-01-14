@@ -31,7 +31,7 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5rem 0.2rem;
+      padding: 0.5rem 0;
 
       p {
         font-size: 1.5rem;
@@ -59,16 +59,17 @@ main {
     .bottom {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      h1 {
-        font-size: 3.8rem;
-        text-transform: uppercase;
-        font-weight: 400;
-        line-height: 0.9em;
-      }
-      p {
-        font-size: 1.6rem;
-      }
+
+        h1 {
+          font-size: 3.8rem;
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 0.9em;
+        }
+        p {
+          font-size: 1.6rem;
+          padding-top: 1.5rem;
+        }
       .display {
         width: 100%;
         padding-top: 2rem;
@@ -86,6 +87,7 @@ main {
               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
               "Helvetica Neue", sans-serif;
             opacity: 0.9;
+            font-weight: 350;
           }
         }
         .line {
@@ -96,6 +98,14 @@ main {
       }
     }
   }
+
+  .sec-3 {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;  
+    }
+  }
 }
 
 @media (min-width: 900px) {
@@ -104,8 +114,32 @@ main {
 
     .sec-1 {
       .text {
+        padding: 1rem 0;
         p {
           font-size: 1rem;
+        }
+      }
+    }
+
+    .sec-2 {
+      flex-direction: row-reverse;
+
+      .bottom {
+
+        h1 {
+          font-size: 4.1rem;
+          padding-top: 1rem;
+        }
+        p {
+          width: 74%;
+          font-size: 1.2rem;
+        }
+
+        .display {
+          margin-top: auto;
+          .line {
+            opacity: 0.5;
+          }
         }
       }
     }

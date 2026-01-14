@@ -31,7 +31,7 @@ main .sec-1 .text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0;
 }
 main .sec-1 .text p {
   font-size: 1.5rem;
@@ -55,7 +55,6 @@ main .sec-2 .top img {
 main .sec-2 .bottom {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 main .sec-2 .bottom h1 {
   font-size: 3.8rem;
@@ -65,6 +64,7 @@ main .sec-2 .bottom h1 {
 }
 main .sec-2 .bottom p {
   font-size: 1.6rem;
+  padding-top: 1.5rem;
 }
 main .sec-2 .bottom .display {
   width: 100%;
@@ -82,18 +82,46 @@ main .sec-2 .bottom .display .strip h1 {
   font-size: 2.7rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   opacity: 0.9;
+  font-weight: 350;
 }
 main .sec-2 .bottom .display .line {
   height: 1px;
   width: 100%;
   background-color: #000;
 }
+main .sec-3 {
+  width: 100%;
+}
+main .sec-3 img {
+  width: 100%;
+  object-fit: cover;
+}
 
 @media (min-width: 900px) {
   main {
     padding: 2rem 3.5rem;
   }
+  main .sec-1 .text {
+    padding: 1rem 0;
+  }
   main .sec-1 .text p {
     font-size: 1rem;
+  }
+  main .sec-2 {
+    flex-direction: row-reverse;
+  }
+  main .sec-2 .bottom h1 {
+    font-size: 4.1rem;
+    padding-top: 1rem;
+  }
+  main .sec-2 .bottom p {
+    width: 74%;
+    font-size: 1.2rem;
+  }
+  main .sec-2 .bottom .display {
+    margin-top: auto;
+  }
+  main .sec-2 .bottom .display .line {
+    opacity: 0.5;
   }
 }
