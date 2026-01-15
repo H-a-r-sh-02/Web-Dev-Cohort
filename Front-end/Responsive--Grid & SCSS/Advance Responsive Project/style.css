@@ -91,10 +91,36 @@ main .sec-2 .bottom .display .line {
 }
 main .sec-3 {
   width: 100%;
+  padding-top: 2.5rem;
 }
 main .sec-3 img {
   width: 100%;
   object-fit: cover;
+}
+main .sec-3 .btm {
+  width: 100%;
+  display: flex;
+  padding-top: 2.5rem;
+  gap: 2rem;
+}
+main .sec-3 .btm h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  opacity: 0.9;
+}
+main .sec-3 .btm .btm-txt h1 {
+  font-size: 4rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1em;
+  padding-bottom: 1.5rem;
+}
+main .sec-3 .btm .btm-txt p {
+  font-size: 1.6rem;
+  opacity: 0.9;
+  line-height: 2.2rem;
 }
 
 @media (min-width: 900px) {
@@ -123,5 +149,30 @@ main .sec-3 img {
   }
   main .sec-2 .bottom .display .line {
     opacity: 0.5;
+  }
+  main .sec-3 {
+    display: flex;
+    gap: 4rem;
+    padding-top: 5rem;
+  }
+  main .sec-3 img {
+    width: 35%;
+  }
+  main .sec-3 .btm {
+    width: 65%;
+    flex-direction: row-reverse;
+  }
+  main .sec-3 .btm h2 {
+    font-size: 1.2rem;
+  }
+  main .sec-3 .btm .btm-txt h1 {
+    font-size: 5em;
+  }
+  main .sec-3 .btm .btm-txt p {
+    width: 71%;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    line-height: 1.5rem;
+    margin-top: 8em;
   }
 }

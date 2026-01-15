@@ -60,16 +60,16 @@ main {
       display: flex;
       flex-direction: column;
 
-        h1 {
-          font-size: 3.8rem;
-          text-transform: uppercase;
-          font-weight: 400;
-          line-height: 0.9em;
-        }
-        p {
-          font-size: 1.6rem;
-          padding-top: 1.5rem;
-        }
+      h1 {
+        font-size: 3.8rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 0.9em;
+      }
+      p {
+        font-size: 1.6rem;
+        padding-top: 1.5rem;
+      }
       .display {
         width: 100%;
         padding-top: 2rem;
@@ -101,9 +101,43 @@ main {
 
   .sec-3 {
     width: 100%;
+    padding-top: 2.5rem;
+
     img {
       width: 100%;
-      object-fit: cover;  
+      object-fit: cover;
+    }
+
+    .btm {
+      width: 100%;
+      display: flex;
+      padding-top: 2.5rem;
+      gap: 2rem;
+      h2 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        opacity: 0.9;
+      }
+
+      .btm-txt {
+        h1 {
+          font-size: 4rem;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 1em;
+          padding-bottom: 1.5rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+          opacity: 0.9;
+          line-height: 2.2rem;
+        }
+      }
     }
   }
 }
@@ -125,7 +159,6 @@ main {
       flex-direction: row-reverse;
 
       .bottom {
-
         h1 {
           font-size: 4.1rem;
           padding-top: 1rem;
@@ -139,6 +172,37 @@ main {
           margin-top: auto;
           .line {
             opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .sec-3 {
+      display: flex;
+      gap: 4rem;
+      padding-top: 5rem;
+
+      img {
+        width: 35%;
+      }
+
+      .btm {
+        width: 65%;
+        flex-direction: row-reverse;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+        .btm-txt {
+          h1 {
+            font-size: 5em;
+          }
+          p {
+            width: 71%;
+            font-size: 1.3rem;
+            opacity: 0.7;
+            line-height: 1.5rem;
+            margin-top: 8em;
           }
         }
       }
