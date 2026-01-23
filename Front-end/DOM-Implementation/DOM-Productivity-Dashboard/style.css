@@ -1,0 +1,310 @@
+:root {
+  --pri: #f6f0d7;
+  --sec: #c5d89d;
+  --ter: #9cab84;
+  --foreground: #89986d;
+}
+
+@font-face {
+  font-family: manropeLight;
+  src: url(./static/Manrope-Light.ttf);
+}
+@font-face {
+  font-family: manropeNormal;
+  src: url(./static/Manrope-Regular.ttf);
+}
+@font-face {
+  font-family: manropeSemi;
+  src: url(./static/Manrope-SemiBold.ttf);
+}
+@font-face {
+  font-family: manropeBold;
+  src: url(./static/Manrope-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "manropeNormal";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--foreground);
+  padding: 2rem 3rem;
+}
+main .allElems {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+main .allElems .task-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+}
+main .allElems .task-cards .todo {
+  height: 18rem;
+  width: 13rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+main .allElems .task-cards .todo :active {
+  scale: 0.95;
+}
+main .allElems .task-cards .todo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .allElems .task-cards .todo h2 {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  color: var(--pri);
+}
+main .allElems .task-cards .daily-planer {
+  height: 18rem;
+  width: 13rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+main .allElems .task-cards .daily-planer :active {
+  scale: 0.95;
+}
+main .allElems .task-cards .daily-planer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .allElems .task-cards .daily-planer h2 {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  color: var(--pri);
+}
+main .allElems .task-cards .motivation {
+  height: 18rem;
+  width: 13rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+main .allElems .task-cards .motivation :active {
+  scale: 0.95;
+}
+main .allElems .task-cards .motivation img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .allElems .task-cards .motivation h2 {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  color: var(--pri);
+}
+main .allElems .task-cards .pomodoro {
+  height: 18rem;
+  width: 13rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+main .allElems .task-cards .pomodoro :active {
+  scale: 0.95;
+}
+main .allElems .task-cards .pomodoro img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .allElems .task-cards .pomodoro h2 {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  color: var(--pri);
+}
+main .allElems .task-cards .daily-goals {
+  height: 18rem;
+  width: 13rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+main .allElems .task-cards .daily-goals :active {
+  scale: 0.97;
+}
+main .allElems .task-cards .daily-goals img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .allElems .task-cards .daily-goals h2 {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  color: var(--pri);
+}
+main .fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
+  padding: 1.5rem;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+main .fullElem .back {
+  padding: 0.3rem 1.1rem;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: var(--ter);
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+main .fullElem .back :active {
+  scale: 0.97;
+}
+main .fullElem h1 {
+  font-family: "manropeLight";
+  font-size: 3rem;
+}
+main .ToDo-Page .todo-container {
+  width: 100%;
+  height: 80%;
+  background-color: var(--foreground);
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+main .ToDo-Page .todo-container .addTask {
+  width: 30%;
+  background-color: var(--ter);
+  border-radius: 1rem;
+}
+main .ToDo-Page .todo-container .addTask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  gap: 0.8rem;
+}
+main .ToDo-Page .todo-container .addTask form #task-input {
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+}
+main .ToDo-Page .todo-container .addTask form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+main .ToDo-Page .todo-container .addTask form .mark {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .ToDo-Page .todo-container .addTask form .mark label {
+  font-size: 0.8rem;
+}
+main .ToDo-Page .todo-container .addTask form button {
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all ease 0.2s;
+}
+main .ToDo-Page .todo-container .addTask form button :active {
+  scale: 0.96;
+}
+main .ToDo-Page .todo-container .taskList {
+  width: 65%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--ter);
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+}
+main .ToDo-Page .todo-container .taskList .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.4rem;
+  background-color: var(--pri);
+  border-radius: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+main .ToDo-Page .todo-container .taskList .list h5 {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .ToDo-Page .todo-container .taskList .list h5 span {
+  font-size: 0.6rem;
+  background-color: red;
+  color: var(--pri);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+}
+main .ToDo-Page .todo-container .taskList .list h5 span.true {
+  opacity: 1;
+}
+main .ToDo-Page .todo-container .taskList .list h5 span.false {
+  opacity: 0;
+}
+main .ToDo-Page .todo-container .taskList .list button {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: var(--ter);
+  font-size: 1rem;
+}

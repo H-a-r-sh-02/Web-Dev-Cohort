@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="allElems">
+            <section class="task-cards">
+                <div class="todo task-card" id="0">
+                    <img src="https://plus.unsplash.com/premium_photo-1710962184909-f9f8dc2c9f5f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>TO Do List</h2>
+                </div>
+                <div class="daily-planer task-card" id="1">
+                    <img src="https://images.unsplash.com/photo-1677249490921-3246e81f19e3?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Daily Planner</h2>
+                </div>
+                <div class="motivation task-card" id="2">
+                    <img src="https://images.unsplash.com/photo-1678986718987-76f0b9357e0f?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Motivation</h2>
+                </div>
+                <div class="pomodoro task-card" id="3">
+                    <img src="https://images.unsplash.com/photo-1644214250706-56e8dbd457ae?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Pomodoro Timer</h2>
+                </div>
+                <div class="daily-goals task-card" id="4">
+                    <img src="https://images.unsplash.com/photo-1718202248232-0cdbc15d29b2?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Daily Goals</h2>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="fullElem ToDo-Page">
+            <button class="back" id="0">Close</button>
+            <h1>Your Personalized Task List</h1>
+            <div class="todo-container">
+                <div class="addTask">
+                    <form>
+                        <input id="task-input" type="text" placeholder="Add Task">
+                        <textarea placeholder="Enter Details" cols="30" rows="10"></textarea>
+                        <div class="mark">
+                            <input type="checkbox" name="" id="check">
+                            <label for="check">Mark as Important!</label>
+                        </div>
+                        <button>Add Task</button>
+                    </form>
+                </div>
+                <div class="taskList">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="fullElem Daily-Page ">
+            <button class="back" id="1">Close</button>
+            <h1>Your Daily Planner</h1> 
+        </section>
+        <section class="fullElem Motivation-Page">
+            <button class="back" id="2">Close</button>
+            <h1>Your Motivation</h1>
+        </section>
+        <section class="fullElem PoMo-Page">
+            <button class="back" id="3">Close</button>
+            <h1>Pomodoro Timer</h1>
+        </section>
+        <section class="fullElem Goals-Page">
+            <button class="back" id="4">Close</button>
+            <h1>Your Goals</h1>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
