@@ -193,6 +193,7 @@ main .fullElem {
 main .fullElem .back {
   padding: 0.3rem 1.1rem;
   font-size: 0.9rem;
+  font-weight: 600;
   border-radius: 0.2rem;
   border: none;
   background-color: var(--ter);
@@ -307,4 +308,107 @@ main .ToDo-Page .todo-container .taskList .list button {
   border: none;
   background-color: var(--ter);
   font-size: 1rem;
+}
+main .Daily-Page .dailyContainer {
+  height: 85%;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--foreground);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: auto;
+  justify-content: space-between;
+}
+main .Daily-Page .dailyContainer .day {
+  position: relative;
+  border-radius: 1rem;
+  width: 48%;
+  margin-bottom: 1.2rem;
+}
+main .Daily-Page .dailyContainer .day p {
+  position: absolute;
+  top: 12%;
+  left: 0.8%;
+  font-size: 1rem;
+  font-family: "manropeSemi";
+}
+main .Daily-Page .dailyContainer .day input {
+  width: 100%;
+  padding: 1.8rem 1rem 0.5rem 1rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--pri);
+}
+main .Motivation-Page h1 {
+  font-style: oblique;
+}
+main .Motivation-Page .motivation-container {
+  width: 40vw;
+  height: 50%;
+  max-height: 55%;
+  background-color: #fff;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  border-radius: 1.5rem;
+  border: 2px solid var(--foreground);
+  padding: 1.2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+main .Motivation-Page .motivation-container .motivationCard {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.85rem;
+}
+main .Motivation-Page .motivation-container .motivationCard .upper {
+  height: 28%;
+  width: 100%;
+  border-radius: 0.85rem 0.85rem 0 0;
+  background-color: var(--sec);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+main .Motivation-Page .motivation-container .motivationCard .upper .dayBox {
+  height: 2.8rem;
+  width: 2.8rem;
+  background-color: var(--foreground);
+  border-radius: 0.6rem;
+  text-align: center;
+  padding-top: 0.2rem;
+}
+main .Motivation-Page .motivation-container .motivationCard .upper .dayBox p {
+  font-size: 0.8rem;
+  font-family: "manropeBold";
+}
+main .Motivation-Page .motivation-container .motivationCard .upper h2 {
+  font-size: 1.3rem;
+  font-family: "manropeBold";
+  color: #1a202c;
+}
+main .Motivation-Page .motivation-container .motivationCard .lower {
+  height: 72%;
+  max-height: 80%;
+  width: 100%;
+  background-color: var(--ter);
+  border-radius: 0 0 0.85rem 0.85rem;
+  padding: 1.4rem;
+}
+main .Motivation-Page .motivation-container .motivationCard .lower p {
+  font-family: "manropeSemi";
+  font-size: 1.1rem;
+  font-style: oblique;
+  margin-bottom: 1rem;
+}
+main .Motivation-Page .motivation-container .motivationCard .lower h2 {
+  font-family: "manropeSemi";
+  font-size: 1.1rem;
+  font-style: oblique;
 }
