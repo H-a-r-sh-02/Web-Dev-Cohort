@@ -40,6 +40,7 @@ main {
   width: 100%;
   background-color: var(--foreground);
   padding: 2rem 3rem;
+  font-family: "manropeNormal";
 
   .allElems {
     height: 100%;
@@ -220,7 +221,7 @@ main {
       right: 5%;
       cursor: pointer;
 
-      :active {
+      &:active {
         scale: 0.97;
       }
     }
@@ -290,7 +291,7 @@ main {
             font-size: 1rem;
             font-weight: 600;
             transition: all ease 0.2s;
-            :active {
+            &:active {
               scale: 0.96;
             }
           }
@@ -341,6 +342,10 @@ main {
             border: none;
             background-color: var(--ter);
             font-size: 1rem;
+
+            &:active {
+              scale: 0.97;
+            }
           }
         }
       }
@@ -389,14 +394,13 @@ main {
   }
 
   .Motivation-Page {
-
     h1 {
       font-style: oblique;
     }
 
     .motivation-container {
       width: 40vw;
-      height: 50%;
+      height: 52%;
       max-height: 55%;
       background-color: #fff;
       position: relative;
@@ -416,6 +420,14 @@ main {
         height: 100%;
         width: 100%;
         border-radius: 0.85rem;
+
+        img {
+          height: 5rem;
+          position: absolute;
+          opacity: 0.5;
+          bottom: 6%;
+          right: 5%;
+        }
 
         .upper {
           height: 28%;
@@ -464,6 +476,86 @@ main {
             font-family: "manropeSemi";
             font-size: 1.1rem;
             font-style: oblique;
+          }
+        }
+      }
+    }
+  }
+
+  .PoMo-Page {
+    background: url("https://images.unsplash.com/photo-1567095751004-aa51a2690368?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    color: var(--pri);
+
+    .back {
+      opacity: 0.8;
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      font-family: "manropeBold";
+      font-style: oblique;
+      text-shadow: 2px 2px 4px rgb(226, 222, 222, 0.2);
+    }
+
+    .pomo-timer {
+      height: 50%;
+      width: 40%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      backdrop-filter: blur(1rem);
+      padding: 2rem;
+      border: 1px solid var(--pri);
+      border-radius: 1rem;
+
+      .session {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        font-family: "manropeSemi";
+        text-shadow: 2px 2px 4px rgb(226, 222, 222, 0.2);
+        padding: 0.5rem 0.6rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 0.2rem;
+
+      }
+
+      .pomo-card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-size: 4.5rem;
+          font-style: normal;
+        }
+
+        button {
+          padding: 0.5rem 0.8rem;
+          border-radius: 1rem;
+          margin: 0.2rem;
+          border: none;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: var(--pri);
+          font-size: 1.2rem;
+          font-weight: 600;
+          font-family: "manropeSemi";
+          cursor: pointer;
+          transition: all ease 0.2s;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+          &:active {
+            scale: 0.97;
           }
         }
       }
