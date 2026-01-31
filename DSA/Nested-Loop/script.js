@@ -1,5 +1,5 @@
 // 1) Right Angle Triangle
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 // let num = prompt("enter a number ");
 //  for(let i=1; i<=num; i++) {
 //     for(let j=1; j<=i; j++) {

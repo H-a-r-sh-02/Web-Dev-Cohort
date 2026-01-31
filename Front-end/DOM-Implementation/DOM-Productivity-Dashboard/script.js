@@ -178,3 +178,15 @@ todo();
 dailyPlanner();
 motivation();
 pomodoro();
+
+const API_KEY = "f85e569ac635470e80c171006262801";
+
+async function weatherApiCall() {
+  var response = await fetch(
+    `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=katni`,
+  ).then((res) => res.json());
+
+  console.log(response);
+}
+
+weatherApiCall();
