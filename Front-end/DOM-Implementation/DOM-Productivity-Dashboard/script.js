@@ -1,3 +1,4 @@
+const API_KEY = "f85e569ac635470e80c171006262801";
 function openCards() {
   var taskCards = document.querySelectorAll(".task-card");
   var fullElem = document.querySelectorAll(".fullElem");
@@ -100,9 +101,8 @@ function motivation() {
   document.querySelector(".dayBox .date").innerText = date.getDate();
   async function quotes() {
     try {
-      const res = await fetch("https://quotes-api-self.vercel.app/quote");
+      const res = await fetch("https://motivational-spark-api.vercel.app/api/quotes/random");
       const data = await res.json();
-
       document.querySelector(".lower p").innerText = data.quote;
       document.querySelector(".lower h2").innerText = `${data.author}~`;
     } catch (err) {
@@ -172,21 +172,42 @@ function pomodoro() {
   pause.addEventListener("click", pauseTimer);
   reset.addEventListener("click", resetTimer);
 }
+function dashBoard() {
+var header = document.querySelector('header');
+var cityName = document.querySelector('.header1 h1');
+var dayTime = document.querySelector('.header1 h2');
+var temp = document.querySelector('.header2 h2');
+var weather = document.querySelector('.header2 .btmDetail h3');
+let bottomDetail = document.querySelectorAll('.header2 .btmDetail .desc h3');
+var isDay = document.querySelector('.header1 h3');
+var isDayNight = ["🌙 Night", "🌞 Day"];
+var weeks = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var date = new Date();
+var day = weeks[date.getDay()];
+var backgrounds = ["https://images.unsplash.com/photo-1672037278142-9b7d7aa83309?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://media.istockphoto.com/id/1362792955/photo/napa-valley-ca.jpg?s=1024x1024&w=is&k=20&c=mKVAuZ4fGmJkUEWHTWn1d3YY5zvlKo8E-gbDKS7pojE="]
 
+async function weatherApiCall() {
+  var response = await fetch(
+    `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=katni, India`,
+  );
+   var data = await response.json();
+   console.log(data);
+   header.style.backgroundImage = `url(${backgrounds[data.current.is_day]})`;
+   cityName.innerText = data.location.name;
+   isDay.innerText = `${isDayNight[data.current.is_day]}`;
+   dayTime.innerText = `${day}, ${date.getHours() == 0 ? 12 : date.getHours()}:${date.getMinutes()} ${date.getHours() > 12 ? "PM" : "AM"}`;
+   temp.innerText = `${data.current.temp_c}`;
+   weather.innerText = `${data.current.condition.text}`;
+   bottomDetail[0].innerText = `Precipitation: ${data.current.precip_mm}%`
+   bottomDetail[1].innerText = `Humidity: ${data.current.humidity}%`
+   bottomDetail[2].innerText = `Wind: ${data.current.wind_kph} km/h`;
+}
+weatherApiCall();
+}
 openCards();
 todo();
 dailyPlanner();
 motivation();
 pomodoro();
+dashBoard();
 
-const API_KEY = "f85e569ac635470e80c171006262801";
-
-async function weatherApiCall() {
-  var response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=katni`,
-  ).then((res) => res.json());
-
-  console.log(response);
-}
-
-weatherApiCall();

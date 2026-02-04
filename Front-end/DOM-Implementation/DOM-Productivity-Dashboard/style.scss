@@ -3,7 +3,7 @@
   --sec: #c5d89d;
   --ter: #9cab84;
   --foreground: #89986d;
-  // --background: #fff;
+  // --background: #6a794f;
 }
 
 @font-face {
@@ -39,18 +39,30 @@ main {
   height: 100%;
   width: 100%;
   background-color: var(--foreground);
-  padding: 2rem 3rem;
+  padding: 0.5rem 3rem 2rem 3rem;
   font-family: "manropeNormal";
+  overflow: hidden;
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 1.3rem;
+      font-style: oblique;
+    }
+  }
 
   .allElems {
     height: 100%;
     width: 100%;
 
     header {
-      height: 45%;
+      height: 42%;
       width: 100%;
       background-color: var(--sec);
-      color: var(--pri);
       margin-bottom: 1rem;
       border-radius: 1rem;
       border: none;
@@ -58,18 +70,51 @@ main {
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
-      background-image: url('https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
       background-size: cover;
-
+      background-position: center 30%;
 
       .header1 {
         display: flex;
-        gap: 0.5rem;
+        flex-direction: column;
+        gap: 0.2rem;
+        font-family: "manropeBold";
+        font-weight: 400;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-size: 1.8rem;
+        }
       }
       .header2 {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: end;
+
+        .temp {
+          display: flex;
+          align-items: start;
+          h2 {
+            font-size: 3rem;           
+          }
+           sup {
+              font-size: 1.3rem;
+            }
+        }
+        .btmDetail {
+          h3 {
+            font-size: 2rem;
+          }
+          .desc {
+            h3 {
+              font-size: 0.9rem;
+            }
+          }
+        }
       }
     }
 
@@ -78,8 +123,8 @@ main {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      justify-content: center;
-      padding: 1rem;
+      justify-content: space-between;
+      padding: 1rem 0;
       position: relative;
 
       .todo {
@@ -548,7 +593,6 @@ main {
         padding: 0.5rem 0.6rem;
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 0.2rem;
-
       }
 
       .pomo-card {
