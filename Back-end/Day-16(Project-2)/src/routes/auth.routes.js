@@ -4,7 +4,7 @@ const { registerUser, loginUser } = require("../controller/auth.controller");
 
 /*
 POST '/register' ✅
-POST '/login'
+POST '/login'✅
 GET '/user'[protected] 
 */
 
