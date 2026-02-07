@@ -43,7 +43,7 @@ import { toast } from 'react-toastify';
           }
           axios.get(`${BACKEND_URL}/songs?mood=${_expression}`)
           .then(response=>{
-            // console.log(response.data);
+            console.log(response.data);
             setsongs(response.data.songs);
           })
           .catch(error => {
