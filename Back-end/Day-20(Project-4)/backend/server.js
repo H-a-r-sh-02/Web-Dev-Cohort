@@ -1,15 +1,18 @@
 require("dotenv").config();
 const app = require("./src/app");
-const connectDB = require("./src/db/db");
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 const generateResponse = require("./src/service/ai.service");
 
-connectDB();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   /* options */
+  cors: {
+    origin: "http://localhost:5173",
+  }
 });
+
+const chatHistory = [];
 
 io.on("connection", (socket) => {
   console.log("a user connected");
@@ -19,8 +22,16 @@ io.on("connection", (socket) => {
   });
 
   socket.on("ai-message", async (data) => {
-    const res = await generateResponse(data.prompt);
-    socket.emit("ai-message-response", {res});
+    chatHistory.push({
+      role: "user",
+      parts: [{ text: data }],
+    });
+    const res = await generateResponse(chatHistory);
+    chatHistory.push({
+      role: "model",
+      parts: [{ text: res }],
+    });
+    socket.emit("ai-message-response", { res });
   });
 });
 
