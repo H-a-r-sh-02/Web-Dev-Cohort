@@ -3,7 +3,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 async function registerUser(req, res) {
-  const { fullName:{ firstName, lastName }, email, password } = req.body;
+  const {
+    fullName: { firstName, lastName },
+    email,
+    password,
+  } = req.body;
   const isUser = await userModel.findOne({ email });
   const hashedPass = await bcrypt.hash(password, 10);
   try {
@@ -77,7 +81,15 @@ async function loginUser(req, res) {
   }
 }
 
+async function logoutUser(req, res) {
+  res.clearCookie("token");
+  res.status(200).json({
+    message: "Logout Successful",
+  });
+}
+
 module.exports = {
   registerUser,
   loginUser,
+  logoutUser
 };

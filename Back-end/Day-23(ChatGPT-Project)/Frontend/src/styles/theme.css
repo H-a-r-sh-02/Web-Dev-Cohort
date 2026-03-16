@@ -1,0 +1,23 @@
+/* --- Formal Monochrome Theme --- */
+:root {
+  /* Light Mode - Keeping it clean and professional */
+  --bg-color: #ffffff;
+  --text-color: #09090b;
+  --card-bg: #fafafa;
+  --border-color: #e4e4e7;
+  --input-bg: #ffffff;
+  --primary-color: #18181b; /* Deep black accent for light mode */
+  --link-color: #5256C0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* The "Black Type" Palette */
+    --bg-color: #09090b;       /* Deep matte black */
+    --text-color: #f4f4f5;     /* High-contrast off-white */
+    --card-bg: #18181b;        /* Deep charcoal for sidebar/cards */
+    --border-color: #27272a;   /* Subtle dark divider */
+    --input-bg: #09090b;       /* Seamless input fields */
+    --primary-color: #ffffff;  /* Pure white for "light" accent elements */
+  }
+}

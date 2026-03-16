@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 28px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.auth-title {
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+.auth-form input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-form button {
+  margin-top: 6px;
+  padding: 11px;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  cursor: pointer;
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+.auth-footer {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
