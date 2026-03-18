@@ -32,7 +32,6 @@ async function getAllChats(req, res) {
       title: chat.title,
       lastActivity: chat.lastActivity,
       user: chat.user,
-      name: user.fullName,
     })),
   });
 }

@@ -1,58 +1,78 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  messages: [],
+  previousChats: [],
+  isSidebarOpen: false,
+  currentChatId: null,
+  isLoggedIn: localStorage.getItem("isLoggedIn") === "true",
+};
+
 const chatSlice = createSlice({
   name: "chat",
-  initialState: {
-    messages: [],
-    previousChats: [],
-    isSidebarOpen: false,
-    user: "",
-    currentChatId: null,
-    isLoggedIn: localStorage.getItem("isLoggedIn") === "true",
-  },
+  initialState,
   reducers: {
     setPreviousChats: (state, action) => {
-      state.previousChats = action.payload;
+      state.previousChats = Array.isArray(action.payload) ? action.payload : [];
     },
+
+    addPreviousChat: (state, action) => {
+      const newChat = action.payload;
+      if (!newChat?._id) return;
+
+      const alreadyExists = state.previousChats.some(
+        (chat) => chat._id === newChat._id,
+      );
+
+      if (!alreadyExists) {
+        state.previousChats.unshift(newChat);
+      }
+    },
+
     setMessages: (state, action) => {
-      state.messages = action.payload;
+      state.messages = Array.isArray(action.payload) ? action.payload : [];
     },
+
+    clearMessages: (state) => {
+      state.messages = [];
+    },
+
     addMessage: (state, action) => {
-      state.messages.push(action.payload);
+      const msg = action.payload;
+
+      if (!msg || typeof msg !== "object") return;
+      if (!msg.content || typeof msg.content !== "string") return;
+
+      state.messages.push({
+        role: msg.role || "assistant",
+        content: msg.content,
+        createdAt: msg.createdAt || null,
+      });
     },
+
     setCurrentChatId: (state, action) => {
       state.currentChatId = action.payload;
     },
-    saveCurrentChat: (state, action) => {
-      const { title, _id } = action.payload;
-      state.currentChatId = _id;
-      if (state.messages.length > 0) {
-        state.previousChats.unshift({
-          _id,
-          title: title,
-          msgs: state.messages,
-        });
-        state.messages = [];
-      }
-    },
+
     toggleSidebar: (state) => {
       state.isSidebarOpen = !state.isSidebarOpen;
     },
+
     closeSidebar: (state) => {
       state.isSidebarOpen = false;
     },
-    setUser: (state, action) => {
-      state.user = action.payload.firstName;
-    },
+
     setLoginStatus: (state, action) => {
       state.isLoggedIn = action.payload;
-      localStorage.setItem("isLoggedIn", action.payload);
+      localStorage.setItem("isLoggedIn", String(action.payload));
     },
+
     handleLogoutState: (state) => {
       state.isLoggedIn = false;
       state.messages = [];
       state.previousChats = [];
       state.currentChatId = null;
+      state.isSidebarOpen = false;
       localStorage.setItem("isLoggedIn", "false");
     },
   },
@@ -60,14 +80,15 @@ const chatSlice = createSlice({
 
 export const {
   setPreviousChats,
+  addPreviousChat,
   setMessages,
+  clearMessages,
   addMessage,
   setCurrentChatId,
-  saveCurrentChat,
   toggleSidebar,
   closeSidebar,
-  setUser,
   setLoginStatus,
   handleLogoutState,
 } = chatSlice.actions;
+
 export default chatSlice.reducer;

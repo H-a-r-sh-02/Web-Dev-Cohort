@@ -20,21 +20,7 @@
   font-weight: 600;
 }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
 
-.nav-links a {
-  text-decoration: none;
-  color: #6366f1; /* Your primary color */
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
-
-.nav-links a:hover {
-  opacity: 0.8;
-}
 
 /* HERO */
 
