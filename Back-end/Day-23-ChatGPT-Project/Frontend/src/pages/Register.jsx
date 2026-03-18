@@ -22,11 +22,7 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Register Data:", formData);
-
     // later you will send this to backend
-
     axios
       .post(
         "http://localhost:3000/api/auth/register",
@@ -42,7 +38,7 @@ function Register() {
       )
       .then((res) => {
         console.log(res);
-        Navigate("/login");
+        navigate("/login");
       })
       .catch((err) => console.log(err));
   };
@@ -85,7 +81,9 @@ function Register() {
             onChange={handleChange}
           />
 
-          <button type="submit"><p>Create Account</p></button>
+          <button type="submit">
+            <p>Create Account</p>
+          </button>
         </form>
 
         <p className="auth-footer">
