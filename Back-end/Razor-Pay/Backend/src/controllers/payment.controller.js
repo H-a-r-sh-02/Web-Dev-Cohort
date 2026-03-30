@@ -31,6 +31,37 @@ async function createOrder(req, res) {
   }
 }
 
+async function verifyPayment(req, res) {  
+  const { razorpayOrderId, razorpayPaymentId, signature } = req.body;
+  const secret = process.env.RAZORPAY_KEY_SECRET;
+
+  try {
+    const {
+      validatePaymentVerification,
+    } = require("../../node_modules/razorpay/dist/utils/razorpay-utils");
+
+    const result = validatePaymentVerification(
+      { order_id: razorpayOrderId, payment_id: razorpayPaymentId },
+      signature,
+      secret,
+    );
+    if (result) {
+      const payment = await paymentModel.findOne({ orderId: razorpayOrderId });
+      payment.paymentId = razorpayPaymentId;
+      payment.signature = signature;
+      payment.status = "COMPLETED";
+      await payment.save();
+      res.json({ status: "success" });
+    } else {
+      res.status(400).send("Invalid signature");
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error verifying payment");
+  }
+}
+
 module.exports = {
   createOrder,
-}
+  verifyPayment,
+};

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import PaymentButton from "./PaymentButton";
 
 const App = () => {
   const [product, setProduct] = useState(null);
@@ -41,9 +42,7 @@ const App = () => {
           <span className="text-base font-semibold">
             {formatPrice(product?.price?.amount ?? 0, product?.price?.currency)}
           </span>
-          <button className="bg-orange-500 text-white px-2 py-2 rounded-md ml-2">
-            Buy Now
-          </button>
+            <PaymentButton />
         </div>
       </div>
     </div>
