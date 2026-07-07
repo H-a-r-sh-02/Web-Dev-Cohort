@@ -16,9 +16,13 @@
 // let a = Number(prompt("Enter first side!"));
 // let b = Number(prompt("Enter second side!"));
 // let c = Number(prompt("Enter third side!"));
+// if (a+b<=c || b+c<=a || c+a<=b) {
+//     console.log("Not a triangle!");
+//  } else {
 // let s = (a+b+c)/2;
 // let A = Math.sqrt(s*(s-a)*(s-b)*(s-c)).toFixed(2);
 // console.log(A);
+// }
 
 // 4) Circumference of circle.
 // let radius = Number(prompt("Enter the radius!"));

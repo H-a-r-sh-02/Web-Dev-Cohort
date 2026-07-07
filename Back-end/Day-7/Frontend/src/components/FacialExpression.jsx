@@ -1,8 +1,8 @@
  import React, { useEffect, useRef } from 'react';
  import * as faceapi from 'face-api.js';
- import axios from 'axios';
- import BACKEND_URL from '../config';
-import { toast } from 'react-toastify';
+//  import axios from 'axios';
+ import axios from '../config';
+ import { toast } from 'react-toastify';
 
  export default function FacialExpression({setsongs}) {
   const videoRef = useRef();
@@ -41,9 +41,8 @@ import { toast } from 'react-toastify';
                 _expression = expression
             }
           }
-          axios.get(`${BACKEND_URL}/songs?mood=${_expression}`)
+          axios.get(`/songs?mood=${_expression}`)
           .then(response=>{
-            console.log(response.data);
             setsongs(response.data.songs);
           })
           .catch(error => {

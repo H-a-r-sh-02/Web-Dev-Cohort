@@ -5,7 +5,7 @@
 // else console.log(`${b} is greater`);    
 
 // 2) Accept an integer and check it is even or odd.
-// let a = Number(prompt("Enter the no."));
+// let a = Number(prompt("Enter the no.")); 
 // if(a%2 == 0)console.log(`${a} is even`);
 // else console.log(`${a} is odd`);
 
@@ -25,7 +25,6 @@
 
 // 5)  Accept a year and check if it is a leap year or not.
 // let year = Number(prompt("Enter a year"));
-// let isLeap = false;
 // if(year%4 == 0){
 //     if(year%100 == 0){
 //         if(year%400 == 0)console.log(`${year} is a leap year!`);
