@@ -18,6 +18,9 @@ import "../styles/chat.css";
 import "../styles/home.css";
 import { ArrowUp, Equal, Plus } from "lucide-react";
 import axios from "axios";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
 
 const API_BASE_URL = "http://localhost:3000";
 
@@ -384,7 +387,12 @@ function Home() {
         <div className="chat-messages">
           {messages.map((msg, index) => (
             <div key={index} className={`message-wrapper ${msg.role}`}>
-              <div className={`message ${msg.role}`}>{msg.content}</div>
+              <div className={`message ${msg.role}`}>
+                <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeHighlight]}
+                >{msg.content}</ReactMarkdown>
+                </div>
             </div>
           ))}
           <div ref={bottomRef} />
